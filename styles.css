@@ -4,7 +4,9 @@ body {
 
     background-color: #2e222d;
 }
-
+#map { 
+    height: 180px; 
+}
 #nav-bar {
     display: flex;
     flex-direction: row;
