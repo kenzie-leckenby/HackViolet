@@ -55,7 +55,7 @@ body {
   cursor: pointer;
 }
 
-#sign-up-button {
+.button-big {
   background: none;
   border-color: var(--sbg-color);
   padding: 8px;
@@ -64,9 +64,13 @@ body {
   border-style: solid;
   border-width: 3px;
   border-radius: 12px;
+  transition: 150ms;
 }
-#sign-up-button:hover {
+
+.button-big:hover {
+  scale: 1.2;
   border-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .page-width {
@@ -80,27 +84,11 @@ body {
   margin-right: 16px;
 }
 
-#console-input {
-  background-color: var(--sbg-color);
-  color: var(--text-color);
-  font-size: medium;
-
-  border: none;
-  border-radius: 16px;
-
-  padding: 16px;
-  margin-bottom: 16px;
-
-  margin-left: 10%;
-  margin-right: 10%;
-
-  width: 100%;
-}
-
 .message {
   display: flex;
   flex-direction: row;
 
+  margin-top: 16px;
   margin-left: 10%;
   margin-right: 10%;
 
@@ -110,9 +98,12 @@ body {
   border-color: var(--bg-color);
   border-style: solid;
   border-radius: 16px;
+
+  transition: 300ms;
 }
 .message:hover {
   cursor: pointer;
+  border-color: var(--text-color);
 }
 .message:hover > div:nth-child(2) {
   animation: message-hover 300ms forwards;
@@ -135,4 +126,43 @@ body {
     opacity: 1;
     transform:translateX(0);
   }
+}
+
+.sub-window {
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 32px;
+  background-color: var(--sbg-color);
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 25%;
+  margin-right: 25%;
+
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.text-input {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: medium;
+
+  border: none;
+  border-radius: 16px;
+
+  padding: 16px;
+  margin-bottom: 16px;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+  width: 100%;
+}
+
+.borderline {
+  border-bottom: #2e222d;
 }

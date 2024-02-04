@@ -5,9 +5,6 @@ function Messages() {
   return(
     <div>
       <DirectMsg />
-      <div class="input-row">
-          <input id="console-input" type="text" placeholder="/..."></input>
-      </div>
     </div>
   )
 }

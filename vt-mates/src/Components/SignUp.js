@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import users from '../users.json';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const addUser = async () => {
     for(let i = 0;i < users.length; i++){
@@ -41,12 +43,14 @@ function SignUp() {
 
     return(
       <div id="sign-up-window">
-        Sign Up
-        <input id="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
-        <input id="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-        <button id="submit" onClick={addUser} >
-          Submit
-        </button>
+        <div class="sub-window">
+            <div class="title">Sign Up</div>
+            <input id="username" class="text-input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+            <input id="password" class="text-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            <button class="button-big" id="Login" onClick={addUser}>Submit</button>
+            <div class="borderline"> </div>
+            <div class="button" onClick={() => navigate('/Profile/SignIn')}> Already have an Account </div>
+        </div>
       </div>
     )
   }
