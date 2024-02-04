@@ -1,8 +1,16 @@
+:root {
+  --bg-color: #2e222d;
+  --text-color: #ffe1cd;
+  --sbg-color: #6A2C3E;
+  --accent-color: #CF4520;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
 
-  background-color: #2e222d;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 #map { 
   height: 180px; 
@@ -19,8 +27,8 @@ body {
   font-style: italic;
   font-size: xx-large;
 
-  background-color: #6A2C3E;
-  color: #ffe1cd;
+  background-color: var(--sbg-color);
+  color: var(--text-color);
 }
 
 .left-side-nav {
@@ -41,6 +49,6 @@ body {
 }
 #profile-button:hover {
   scale: 1.2;
-  color: #CF4520;
+  color: var(--accent-color);
   cursor: pointer;
 }
