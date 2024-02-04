@@ -47,9 +47,9 @@ function SignUp() {
             <div class="title">Sign Up</div>
             <input id="username" class="text-input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
             <input id="password" class="text-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-            <button class="button-big" id="Login" onClick={addUser}>Submit</button>
-            <div class="borderline"> </div>
-            <div class="button" onClick={() => navigate('/Profile/SignIn')}> Already have an Account </div>
+            <button class="button-span" id="Login" onClick={addUser}>Submit</button>
+            <hr class="borderline" />
+            <div class="highlight" onClick={() => navigate('/Profile/SignIn')}> Already have an Account </div>
         </div>
       </div>
     )

@@ -25,9 +25,9 @@ const longin = () => {
                 <div class="title">Login</div>
                 <input id="username" class="text-input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
                 <input id="password" class="text-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-                <button class="button-big" id="Login" onClick={longin}>Submit</button>
-                <div class="borderline"> </div>
-                <div class="button" onClick={() => navigate('/Profile/SignUp')}> Create new account </div>
+                <button class="button-span" id="Login" onClick={longin}>Submit</button>
+                <hr class="borderline" />
+                <div class="highlight" onClick={() => navigate('/Profile/SignUp')}> Create new account </div>
             </div>
         </div>
     )
