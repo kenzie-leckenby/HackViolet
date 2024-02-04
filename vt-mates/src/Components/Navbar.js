@@ -9,17 +9,17 @@ function Navbar() {
 
   return(
     <div id="nav-bar">
-            <div id="home-button" class="left-side-nav" onClick={() => navigate('/')}>
+            <div id="home-button" class="left-side-nav button" onClick={() => navigate('/')}>
               VTMates
               </div>
-            <div id="map-button" onClick={() => navigate('/Map')}>
+            <div id="map-button" class="button" onClick={() => navigate('/Map')}>
                 <FontAwesomeIcon icon={ faEarthAmericas }/>
             </div>
             <div class="right-side-nav">
-                <div id="message-button" onClick={() => navigate('/Messages')}>
+                <div id="message-button" class="button" onClick={() => navigate('/Messages')}>
                     <FontAwesomeIcon icon={ faEnvelope } />
                 </div>
-                <div id="profile-button" onClick={() => navigate('/Profile/SignIn')}>
+                <div id="profile-button" class="button" onClick={() => navigate('/Profile/SignIn')}>
                     <FontAwesomeIcon icon={ faUser } />
                 </div>
             </div>

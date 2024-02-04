@@ -44,11 +44,27 @@ body {
   margin-right: 24px;
 }
 
-#profile-button {
+.button {
   transition: 150ms;
 }
-#profile-button:hover {
+.button:hover {
   scale: 1.2;
   color: var(--accent-color);
   cursor: pointer;
+}
+
+#sign-up-button {
+  background: none;
+  border-color: var(--sbg-color);
+  padding: 8px;
+  color: var(--text-color);
+  font-size: larger;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 12px;
+}
+
+.page-width {
+  margin-left: 10%;
+  margin-right: 10%;
 }
