@@ -7,11 +7,13 @@ import { useNavigate } from 'react-router-dom';
 function DirectMsg() {
     const navigate = useNavigate();
 
+    const username = 'sampleuser1';
+
     return(
-        <div class="message" onClick={() => navigate('/messages/sampleuser1')}>
+        <div class="message" onClick={() => navigate(`/messages/${username}`)}>
             <div>
                 <FontAwesomeIcon icon={ faUser } size='xl' />
-                <span class="username">sampleuser1</span>
+                <span class="username">{username}</span>
             </div>
             <div class="message-popup"><FontAwesomeIcon icon={faPaperPlane} size='xl' /></div>
         </div>

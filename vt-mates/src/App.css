@@ -101,6 +101,7 @@ body {
   display: flex;
   flex-direction: row;
 
+  margin-top: 16px;
   margin-left: 10%;
   margin-right: 10%;
 
@@ -110,9 +111,12 @@ body {
   border-color: var(--bg-color);
   border-style: solid;
   border-radius: 16px;
+
+  transition: 300ms;
 }
 .message:hover {
   cursor: pointer;
+  border-color: var(--text-color);
 }
 .message:hover > div:nth-child(2) {
   animation: message-hover 300ms forwards;
