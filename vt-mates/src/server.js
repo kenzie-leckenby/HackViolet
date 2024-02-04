@@ -4,21 +4,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const cors = require('cors');
 
   //sets and opens a path and port for react to access in components
 const app = express();
 const port = 3001;
 
+app.use(cors());
 app.use(bodyParser.json());
+
+app.options('/addObject', cors())
 
 app.post('/addObject', (req, res) => {
   const { newObject } = req.body;
 
-  const jsonData = fs.readFileSync('data.json', 'utf8');
-  const existingData = JSON.parse(jsonData);
-  existingData.push(newObject);
-  const updatedJsonData = JSON.stringify(existingData, null, 2);
-  fs.writeFileSync('data.json', updatedJsonData, 'utf8');
+  const userJson = fs.readFileSync('users.json', 'utf8');
+  const existingUsers = JSON.parse(userJson);
+  existingUsers.push(newObject);
+  const updatedUserJson = JSON.stringify(existingUsers, null, 2);
+  fs.writeFileSync('users.json', updatedUserJson, 'utf8');
 
   res.json({ success: true });
 });
