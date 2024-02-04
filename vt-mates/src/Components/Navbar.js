@@ -19,7 +19,7 @@ function Navbar() {
                 <div id="message-button" class="button" onClick={() => navigate('/Messages')}>
                     <FontAwesomeIcon icon={ faEnvelope } />
                 </div>
-                <div id="profile-button" class="button" onClick={() => navigate('/Profile')}>
+                <div id="profile-button" class="button" onClick={() => navigate('/Profile/SignIn')}>
                     <FontAwesomeIcon icon={ faUser } />
                 </div>
             </div>
