@@ -7,22 +7,19 @@ import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const navigate = useNavigate();
 
-  function handleClick() {
-        navigate("/Profile");
-  }
   return(
     <div id="nav-bar">
-            <div id="home-button" class="left-side-nav" >
+            <div id="home-button" class="left-side-nav" onClick={() => navigate('/')}>
               VTMates
               </div>
-            <div id="map-button">
+            <div id="map-button" onClick={() => navigate('/Map')}>
                 <FontAwesomeIcon icon={ faEarthAmericas }/>
             </div>
             <div class="right-side-nav">
-                <div id="message-button" >
+                <div id="message-button" onClick={() => navigate('/Messages')}>
                     <FontAwesomeIcon icon={ faEnvelope } />
                 </div>
-                <div id="profile-button" onClick={handleClick}>
+                <div id="profile-button" onClick={() => navigate('/Profile')}>
                     <FontAwesomeIcon icon={ faUser } />
                 </div>
             </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Home() {
+function Map() {
   return(
     <div>
-        Home
+      Map
     </div>
   )
 }
 
-export default Home;
+export default Map;
