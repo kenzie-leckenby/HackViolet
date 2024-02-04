@@ -21,13 +21,14 @@ const longin = () => {
 
     return(
         <div id="sign-in-window">
-        Sign In
-        <input id="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
-        <input id="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-        <button id="submit" onClick={longin}>
-            Submit
-        </button>
-        <div onClick={() => navigate('/Profile/SignUp')}> Create new account </div>
+            <div class="sub-window">
+                <div class="title">Login</div>
+                <input id="username" class="text-input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+                <input id="password" class="text-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                <button class="button-big" id="Login" onClick={longin}>Submit</button>
+                <div class="borderline"> </div>
+                <div class="button" onClick={() => navigate('/Profile/SignUp')}> Create new account </div>
+            </div>
         </div>
     )
 }
