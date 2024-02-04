@@ -1,19 +1,35 @@
 import React from 'react';
 
-const signIn = () => {
+const SignIn = () => {
   return(
-    <div>
-      
+    <div id="sign-in-window">
+      Sign In
+      <input id="username"></input>
+      <input id="password"></input>
+      <button id="submit" >
+        Submit
+      </button>
     </div>
   )
 }
 
+const SignUp = () => {
+  return(
+    <div id="sign-up-window">
+      Sign Up
+      <input id="username"></input>
+      <input id="password"></input>
+      <button id="submit" >
+        Submit
+      </button>
+    </div>
+  )
+}
 
 function Profile() {
-
   return(
-    <div id="profile-page">
-      
+    <div>
+      <SignUp />
     </div>
   )
 }
