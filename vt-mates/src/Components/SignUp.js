@@ -9,7 +9,7 @@ function SignUp() {
 
   const addUser = async () => {
     for(let i = 0;i < users.length; i++){
-      if(users[i].username === username || users[i].password === password){
+      if(users[i].username === username && users[i].password === password){
         console.log("Username or password already exists")
         return;
       }

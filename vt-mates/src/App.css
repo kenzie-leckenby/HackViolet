@@ -166,3 +166,7 @@ body {
 .borderline {
   border-bottom: #2e222d;
 }
+
+.leaflet-container {
+  height: 750px;
+}
