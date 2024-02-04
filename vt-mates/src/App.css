@@ -11,6 +11,8 @@ body {
 
   background-color: var(--bg-color);
   color: var(--text-color);
+
+  font-size: x-large;
 }
 #map { 
   height: 180px; 
@@ -63,8 +65,74 @@ body {
   border-width: 3px;
   border-radius: 12px;
 }
+#sign-up-button:hover {
+  border-color: var(--accent-color);
+}
 
 .page-width {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.input-row {
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#console-input {
+  background-color: var(--sbg-color);
+  color: var(--text-color);
+  font-size: medium;
+
+  border: none;
+  border-radius: 16px;
+
+  padding: 16px;
+  margin-bottom: 16px;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+  width: 100%;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+  background-color: var(--sbg-color);
+  padding: 16px;
+
+  border-color: var(--bg-color);
+  border-style: solid;
+  border-radius: 16px;
+}
+.message:hover {
+  cursor: pointer;
+}
+.message:hover > div:nth-child(2) {
+  animation: message-hover 300ms forwards;
+}
+
+.username {
+  margin-left: 16px;
+}
+
+.message-popup {
+  margin-left: 32px;
+  opacity: 0;
+}
+
+@keyframes message-hover {
+  from {
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform:translateX(0);
+  }
 }
